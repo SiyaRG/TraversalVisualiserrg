@@ -1,12 +1,15 @@
 
 
 body {
+    display: flex;
+    align-items: top;
   height: 100vh;
   width: 100vw;
    background: linear-gradient(#0cd7f2 ,#272b2b );
    background-repeat: no-repeat ;
    background-attachment: fixed;
    background-size : cover;
+   padding: 1Rem;
    
    /* Example neon gradient */
   
@@ -16,67 +19,176 @@ body {
     
   
   margin:0;
+  padding:0;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 form {
   display: flex;
   flex-direction: column;
+  
+  
 }
 
 #nav-menu{
     
+    
     display: flex;
     list-style-type: none;
-    padding-right: 2px;
+    
+    
+    margin: 1.5Rem 1.5Rem 0Rem 1.5Rem;
+    
+    padding-left: 0;
+    
+    
+    
+    
+    
     
 }
 
-#nav-menu li{
+#nav-menu li+li{
     padding-left: 1em;
     color: white;
 }
 
 #portfolio{
+    color: white;
     
+    position: relative  ;
 
-    padding-right: 8em;
+    padding-right: 20Rem;
 }
 
 .form-container {
     overflow-x: auto;
+    
+    margin: 2px;
   
   background-color: #272b2b; /* Background color for the form container */
-  padding: 2px;
+  
   
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for the form container */
-  max-width: 400px; /* Set maximum width for the form container */
-  width: 100%; /* Ensure the form container takes full width */
+  /* Set maximum width for the form container */
+  width: 100%; 
+  max-width: 400vw ; /*Ensure the form container takes full width */
 }
 
-header h1{
-    
+.home-info{
+    display: flex;
+    flex-direction: column;
+    margin: 8Rem 8Rem 8Rem 1Rem;
 }
+
+.view-button{
+    margin-left: 1Rem;
+    width: 6Rem;
+    height: 3Rem;
+    white-space: nowrap ;
+    border-radius: 10px;
+    animation: buttonIn 1s ease-in-out forwards, buttonView 2s 1s ease-in-out alternate infinite ;
+    }
+    
+@keyframes buttonIn{
+    0%{
+        transform: translateX(-20Rem);
+    }
+    80%{
+        transform: translateX(0.5Rem);
+    }
+    90%{
+        transform: translateX(0);
+        background-color: #272b2b;
+    box-shadow: none;
+    border-style: groove ;
+    }
+    100%
+    {
+        background-color: #0cd7f2;
+    box-shadow: 0 0 10px #0cd7f2;
+    border-style: groove ;
+}
+        
+    }
+    
+@keyframes buttonView{
+    from{transform: scale(1);}
+    to{transform: scale(1.1);}
+}
+    
+
+
 
 header h1, p{
     margin-left : 20px;
-    text-shadow: 2px 2px 2px 4px #ffffff;
+    text-shadow: rgba(12, 215, 242, 1);
+    max-width: 20Rem;
     
 }
+header h1{
+    margin-bottom: 0;
+    animation: parIn .8s ease forwards;
+}
+
+.dev-text{   
+    font-weight: bold;
+    animation: devView 3s ease-in-out
+                forwards;
+    
+}
+@keyframes devView{
+    from{
+} to{ color: #0cd7f2;}
+
+}
+
+
+.siya-text{
+    animation: siyaView 2.5s ease-in-out
+                forwards;
+}
+@keyframes siyaView{
+     from{
+} to{ color: white;}
+}
+
+
+
+p{
+    margin-top: 0.5Rem;
+    margin-bottom: 2Rem;
+    animation: parIn 1s .1s ease forwards;
+}
+@keyframes parIn{
+    0%{
+        transform: translateX(-20Rem);
+    }
+    80%{
+        transform: translateX(0.2Rem);
+    }
+    90%{
+        transform: translateX(0);
+        
+    }
+    100%
+    {
+        
+}
+        
+    }
 
 #home{
     color: #0cd7f2;
-    text-shadow:2px 2px 2px 4px #ffffff;
+    background-color:rgba(12, 215, 242, 0.7);
+    box-shadow: 0 0 10px #0cd7f2;
+    border :none;
     text-decoration: underline ;
+    --hLeft: home:left;
+
 }
 
-.dev-text{
-    font-size: 26px;
-    font-weight: bold;
-    color: #0cd7f2;
-    
-}
