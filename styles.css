@@ -10,6 +10,7 @@ body {
    background-attachment: fixed;
    background-size : cover;
    padding: 1Rem;
+   margin:0;
    
    /* Example neon gradient */
   
@@ -24,11 +25,12 @@ body {
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 form {
   display: flex;
   flex-direction: column;
+  
   
   
 }
@@ -37,27 +39,61 @@ form {
     
     
     display: flex;
+    align-items: center ;
     list-style-type: none;
+    background-color: #1f2121;
     
+    margin: 0;
     
-    margin: 1.5Rem 1.5Rem 0Rem 1.5Rem;
-    
-    padding-left: 0;
-    
+    padding: 1Rem;
+    border-radius: 8px;
+    animation: menuIn 1s ease-in-out
+                forwards;
     
     
     
     
     
 }
+@keyframes menuIn{
+    0%{
+        transform: translateY(-2Rem);
+        background-color: #272b2b;
+    }
+    90%{
+        transform: translateY(0);
+        
+    }
+    100%{
+        background-color: #1f2121;
+}
+}
+
+#nav-menu li{
+    color: rgba(100, 100, 100, 0);
+    animation: mItemsIn 1s .5s ease-in-out
+                forwards;
+    
+}
+
+@keyframes mItemsIn{
+    from{
+        color: rgba(100, 100, 100, 0);
+    }
+    to{color: rgba(255, 255, 255, 1);}
+    
+}
+    
 
 #nav-menu li+li{
     padding-left: 1em;
-    color: white;
+    
+    white-space: nowrap ;
+    
 }
 
 #portfolio{
-    color: white;
+    
     
     position: relative  ;
 
@@ -65,24 +101,33 @@ form {
 }
 
 .form-container {
-    overflow-x: auto;
+    position: relative ;
     
+    overflow-y: auto;
+    overflow-x: auto;
     margin: 2px;
   
   background-color: #272b2b; /* Background color for the form container */
   
   
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for the form container */
+  box-shadow: 0 0 3Rem rgba(0, 0, 0, 0.7); /* Box shadow for the form container */
   /* Set maximum width for the form container */
+  height: 100%; 
+  max-height: 400vh;
   width: 100%; 
   max-width: 400vw ; /*Ensure the form container takes full width */
 }
-
+.cContent{
+    
+    display: flex;
+    flex-direction: row;
+}
 .home-info{
     display: flex;
     flex-direction: column;
     margin: 8Rem 8Rem 8Rem 1Rem;
+    align-self: center;
 }
 
 .view-button{
@@ -183,12 +228,88 @@ p{
     }
 
 #home{
-    color: #0cd7f2;
-    background-color:rgba(12, 215, 242, 0.7);
-    box-shadow: 0 0 10px #0cd7f2;
+    color: rgba(100, 100, 100, 0);;
+        
+    box-shadow: 0 0 0px #0cd7f2;
     border :none;
     text-decoration: underline ;
-    --hLeft: home:left;
+    border-radius: 0.6em;
+    animation: homeIn 1s .5s ease-in-out forwards;
 
 }
 
+@keyframes homeIn{
+    from{
+        color: rgba(100, 100, 100, 0);
+        background-color:rgba(12, 215, 242, 0);
+        box-shadow: 0 0 0px #0cd7f2;}
+    
+    to{color: #0cd7f2;
+        background-color:rgba(12, 215, 242, 0.7);
+     box-shadow: 0 0 10px #0cd7f2;}
+    
+}
+
+
+
+.pic-icon{
+    display: flex;
+    justify-content: center;
+    position: relative ;
+    align-self: center;
+    
+    
+    align-items: center;
+    padding:5px;
+    margin-left: 1Rem;
+    
+    height: 13.5Rem;
+    width:13.5Rem;
+     border-style: none;
+     animation: iconIn 2s ease-in-out forwards;
+}
+
+@keyframes iconIn{
+    from{transform: translateX(20Rem);}
+    to{transform: translateX(0);}
+}
+
+
+#picture{
+    background-color:rgba(12, 215, 242, 0.1);
+     border-radius: 10px;
+     
+     height: 10Rem;
+     width: 10Rem;
+    border-style: solid ;
+    border-color:rgba(12, 215, 242, 1);
+    border-width: 10px;
+    
+    transform: rotateZ(45deg) ;
+    box-shadow: 0 0 1Rem #0cd7f2;
+    animation : pictureIn 2s ease-in-out forwards, picView 3s 2s ease-in-out alternate infinite ;
+}
+
+@keyframes pictureIn{
+    
+    0%{
+        transform: translateX(20Rem);
+        transform: rotateZ(540deg) ;
+    }
+    70%{
+        transform: translateX(-1Rem);
+    }
+    85%{
+        transform: translateX(0);
+        
+    }
+    100%
+    {
+        
+      transform: rotateZ(45deg) ;
+}
+}
+@keyframes picView{
+    from{box-shadow: 0 0 1Rem #0cd7f2;}
+    to{box-shadow: 0 0 2.5Rem #0cd7f2;}
+}
