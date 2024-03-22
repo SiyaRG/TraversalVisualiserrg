@@ -12,21 +12,11 @@ body {
    padding: 1Rem;
    margin:0;
    
-   /* Example neon gradient */
+ 
   
 }
 
-.container {
-    
-  
-  margin:0;
-  padding:0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 form {
   display: flex;
   flex-direction: column;
@@ -34,10 +24,29 @@ form {
   
   
 }
+.form-container {
+    position: relative   ;
+    
+    
+    overflow-y: auto;
+    overflow-x: auto;
+    margin: 1rem;
+  
+  background-color: #272b2b;
+  border-width: .1Rem;
+  border-style: solid;
+  
+  border-radius: .7rem;
+  box-shadow: 0 0 3Rem rgba(0, 0, 0, 0.7); 
+  height: 100%; 
+  max-height: 100%;
+  width: 100%; 
+  max-width: 100% ;
+}
 
 #nav-menu{
     
-    
+    position: absolute  ;
     display: flex;
     align-items: center ;
     list-style-type: none;
@@ -46,15 +55,25 @@ form {
     margin: 0;
     
     padding: 1Rem;
-    border-radius: 8px;
+    border-radius: 0.7rem;
     animation: menuIn 1s ease-in-out
                 forwards;
     
-    
+    color: rgba(100, 100, 100, 0);
     
     
     
 }
+#cContent{
+
+    display: flex;
+    margin-top: 3Rem;
+    position: absolute    ;
+    justify-content: space-around ;
+    align-items: center;
+    
+}
+
 @keyframes menuIn{
     0%{
         transform: translateY(-2Rem);
@@ -70,7 +89,7 @@ form {
 }
 
 #nav-menu li{
-    color: rgba(100, 100, 100, 0);
+    
     animation: mItemsIn 1s .5s ease-in-out
                 forwards;
     
@@ -86,7 +105,7 @@ form {
     
 
 #nav-menu li+li{
-    padding-left: 1em;
+    padding-left: 1rem;
     
     white-space: nowrap ;
     
@@ -100,34 +119,13 @@ form {
     padding-right: 20Rem;
 }
 
-.form-container {
-    position: relative ;
-    
-    overflow-y: auto;
-    overflow-x: auto;
-    margin: 2px;
-  
-  background-color: #272b2b; /* Background color for the form container */
-  
-  
-  border-radius: 10px;
-  box-shadow: 0 0 3Rem rgba(0, 0, 0, 0.7); /* Box shadow for the form container */
-  /* Set maximum width for the form container */
-  height: 100%; 
-  max-height: 400vh;
-  width: 100%; 
-  max-width: 400vw ; /*Ensure the form container takes full width */
-}
-.cContent{
-    
-    display: flex;
-    flex-direction: row;
-}
+
 .home-info{
     display: flex;
     flex-direction: column;
     margin: 8Rem 8Rem 8Rem 1Rem;
-    align-self: center;
+    width: 20rem;
+    
 }
 
 .view-button{
@@ -135,7 +133,7 @@ form {
     width: 6Rem;
     height: 3Rem;
     white-space: nowrap ;
-    border-radius: 10px;
+    border-radius: 0.8rem;
     animation: buttonIn 1s ease-in-out forwards, buttonView 2s 1s ease-in-out alternate infinite ;
     }
     
@@ -170,7 +168,7 @@ form {
 
 
 header h1, p{
-    margin-left : 20px;
+    margin-left : 1rem;
     text-shadow: rgba(12, 215, 242, 1);
     max-width: 20Rem;
     
@@ -227,13 +225,14 @@ p{
         
     }
 
+
 #home{
     color: rgba(100, 100, 100, 0);;
         
     box-shadow: 0 0 0px #0cd7f2;
     border :none;
     text-decoration: underline ;
-    border-radius: 0.6em;
+    border-radius: 0.6rem;
     animation: homeIn 1s .5s ease-in-out forwards;
 
 }
@@ -260,7 +259,7 @@ p{
     
     
     align-items: center;
-    padding:5px;
+    padding:0.2rem;
     margin-left: 1Rem;
     
     height: 13.5Rem;
@@ -277,13 +276,13 @@ p{
 
 #picture{
     background-color:rgba(12, 215, 242, 0.1);
-     border-radius: 10px;
+     border-radius: 0.5rem;
      
      height: 10Rem;
      width: 10Rem;
     border-style: solid ;
     border-color:rgba(12, 215, 242, 1);
-    border-width: 10px;
+    border-width: 0.6rem;
     
     transform: rotateZ(45deg) ;
     box-shadow: 0 0 1Rem #0cd7f2;
