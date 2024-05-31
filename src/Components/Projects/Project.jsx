@@ -26,7 +26,13 @@ const Project = ({ project }) => {
                     <Card.Body className="d-flex flex-column align-items-center">
                         <Card.Title>{project.name}</Card.Title>
                         <Card.Text>{project.description}</Card.Text>
-                        <Button id="btnGit" className="btn"></Button>
+                        <Button
+                            id="btnGit"
+                            className="btn"
+                            onClick={() => {
+                                window.location.href = "https://github.com/SiyaRG";
+                            }}
+                        ></Button>
                     </Card.Body>
                     <Card.Footer className="d-flex justify-content-center">
                         <Row>

@@ -1,4 +1,5 @@
 {
+    "homepage": "https://siyarg.github.io/Portfolio",
     "name": "siya-app",
 
     "version": "0.1.0",
@@ -35,7 +36,8 @@
 
     "scripts": {
         "start": "react-scripts start",
-
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
         "build": "CI=false react-scripts build",
 
         "test": "react-scripts test",
