@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 
 import { Container, Navbar, Nav } from "react-bootstrap";
-import devLogo from "../Resources/Icons/power-button-svgrepo-com.svg";
+import devLogo from "../Resources/Icons/36311.svg";
 
-const MainNav = ({ toggle }) => {
-	const handleToggle = view => {
-		toggle(view);
-	};
+const MainNav = ({ toggleMode }) => {
 	return (
 		<Navbar
 			className="bg-body-tertiary sticky-top"
@@ -14,7 +11,7 @@ const MainNav = ({ toggle }) => {
 			expand="md"
 		>
 			<Container fluid>
-				<Navbar.Brand href="#home">
+				<Navbar.Brand href="#home" className="c">
 					<img
 						alt=""
 						src={devLogo}
@@ -22,46 +19,28 @@ const MainNav = ({ toggle }) => {
 						height="30"
 						className="d-inline-block align-top"
 					/>{" "}
-					Siya
+					Chess.rg
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
-					<Nav className="ms-auto d-flex">
+					<Nav className="ms-auto c d-flex">
 						<Nav.Link
-							className="ms-auto"
-							href="#home"
+							className="c ms-auto mt-3"
+							href="#Multiplayer"
 							onClick={() => {
-								handleToggle("Home");
+								toggleMode("Multiplayer");
 							}}
 						>
-							Home
+							Multiplayer
 						</Nav.Link>
 						<Nav.Link
-							className="ms-auto"
-							href="#AboutMe"
+							className="c ms-auto mt-2"
+							href="#Stockfish"
 							onClick={() => {
-								handleToggle("About");
+								toggleMode("Stockfish");
 							}}
 						>
-							About Me
-						</Nav.Link>
-						<Nav.Link
-						className="ms-auto"
-							href="#Projects"
-							onClick={() => {
-								handleToggle("Projects");
-							}}
-						>
-							Projects
-						</Nav.Link>
-						<Nav.Link
-							className="ms-auto"
-							href="#ContactMe"
-							onClick={() => {
-								handleToggle("Contact");
-							}}
-						>
-							Contact Me
+							Stockfish
 						</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>
