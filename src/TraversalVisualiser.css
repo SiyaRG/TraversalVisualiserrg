@@ -1,0 +1,123 @@
+:root {
+    box-sizing: border-box;
+    font-size: 0.8em;
+    --main: #4567b7;
+    --secondary: #ff8f4a;
+    --accent: rgba(190, 9, 220, 1);
+}
+@font-face {
+    font-family: travFont;
+    src: url("Resources/Fonts/VeniteAdoremus-rgRBA.ttf");
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    font-family: travFont;
+    color: var(--main);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #1a1d23;
+}
+#spinner {
+    position: absolute;
+    align-self: center;
+}
+h1,
+span {
+    color: var(--secondary);
+}
+#navBrand {
+    color: var(--main);
+}
+#nav,
+#footer {
+    background-color: var(--secondary);
+}
+#btnNav {
+    background-color: var(--main);
+}
+#searchInfo,
+#searchInfo > * > * {
+    color: var(--main);
+}
+span {
+    text-emphasis: true;
+    font: bold;
+}
+#graph {
+    background: var(--main);
+    box-shadow: 0 0 0.4rem var(--accent);
+    display: grid;
+    grid-template-columns: repeat(20, auto);
+    grid-template-rows: repeat(20, auto);
+
+    padding: 0.1rem;
+    width: 20rem;
+    height: 20rem;
+}
+#graph > div {
+    border: solid 0.2px black;
+}
+
+.visited {
+    animation:
+        flip 0.5s ease,
+        toVisited 0.5s linear forwards;
+}
+@keyframes toVisited {
+    from {
+        background-color: grey;
+    }
+    to {
+        background-color: var(--accent);
+    }
+}
+
+.reached {
+    background-color: lightgreen;
+    animation:
+        flip 0.5s ease,
+        toDestination 0.5s linear forwards;
+}
+@keyframes toDestination {
+    from {
+        background-color: grey;
+    }
+    to {
+        background-color: rgba(236, 244, 41, 0.733);
+    }
+}
+.destination {
+    background-color: green;
+}
+.origin {
+    background-color: lightblue;
+}
+.obstacle {
+    background-color: black;
+}
+.normal {
+    background: var(--main);
+    animation: none;
+}
+#btnToggle {
+    background: var(--accent);
+    height: 2.5rem;
+    width: 5rem;
+    box-shadow: 0 0 0.5rem rgba(23, 34, 31, 0.733);
+    border: none;
+}
+#btnToggle:active {
+    animation: tada 0.2s linear;
+    background: var(--main);
+}
+#btnToggle:hover {
+    animation: heartbeat 0.5s;
+    opacity: 0.5;
+}

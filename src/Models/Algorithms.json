@@ -1,0 +1,30 @@
+{
+    "dfs": {
+        "name": "Depth First Search",
+        "timeComplexity": "O(V + E)",
+        "spaceComplexity": "O(N)",
+        "description": "is a tree traversal algorithm that attempts to identify a node that meets a given criteria. It visits all the nodes in order of the first child to the last.",
+        "traversalType": "Pathfinder"
+    },
+    "bfs": {
+        "name": "Breadth First Search",
+        "timeComplexity": "O(V + E)",
+        "spaceComplexity": "O(N)",
+        "description": "is a tree traversal algorithm that attempts to identify a node that meets a given criteria. It visits all the nodes in order of the first generation of child nodes to the last.",
+        "traversalType": "Pathfinder"
+    },
+    "dijkstra": {
+        "name": "Dijkstra's Algorithm",
+        "timeComplexity": "O((E)+V(logV))",
+        "spaceComplexity": "O(N)",
+        "description": "is a shortest path finding Breadth First Search. It identifies the shortest path from a given node to every other node.",
+        "traversalType": "Shortest Path"
+    },
+    "a_star": {
+        "name": "A*",
+        "timeComplexity": "O(E(logV) = O(b^d))",
+        "spaceComplexity": "O(V) = O(b^d)",
+        "description": "(A-star) is a shortest path finding Breadth First Search and extension of Dijkstra's Algorithm. It identifies the shortest path from between two distinct nodes.",
+        "traversalType": "Shortest Path"
+    }
+}
