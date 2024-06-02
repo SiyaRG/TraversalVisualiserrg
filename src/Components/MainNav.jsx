@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { Container, Navbar, Nav } from "react-bootstrap";
-import devLogo from "../Resources/Icons/36311.svg";
+import devLogo from "../Resources/Icons/tic-tac-toe-game-svgrepo-com.svg";
 
 const MainNav = ({ toggleMode }) => {
 	return (
@@ -11,7 +11,7 @@ const MainNav = ({ toggleMode }) => {
 			expand="md"
 		>
 			<Container fluid>
-				<Navbar.Brand href="#home" className="c">
+				<Navbar.Brand href="#home" className="NBrand">
 					<img
 						alt=""
 						src={devLogo}
@@ -19,14 +19,14 @@ const MainNav = ({ toggleMode }) => {
 						height="30"
 						className="d-inline-block align-top"
 					/>{" "}
-					Chess.rg
+					TIC TAC TOE.rg
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
-					<Nav className="ms-auto c d-flex">
+					<Nav className="ms-auto NBrand">
 						<Nav.Link
-							className="c ms-auto mt-3"
 							href="#Multiplayer"
+							className="ms-auto Multiplayer"
 							onClick={() => {
 								toggleMode("Multiplayer");
 							}}
@@ -34,13 +34,31 @@ const MainNav = ({ toggleMode }) => {
 							Multiplayer
 						</Nav.Link>
 						<Nav.Link
-							className="c ms-auto mt-2"
-							href="#Stockfish"
+							href="#Easy"
+							className="ms-auto Easy"
 							onClick={() => {
-								toggleMode("Stockfish");
+								toggleMode("Easy");
 							}}
 						>
-							Stockfish
+							Easy
+						</Nav.Link>
+						<Nav.Link
+							href="#Medium"
+							className="ms-auto Medium"
+							onClick={() => {
+								toggleMode("Medium");
+							}}
+						>
+							Medium
+						</Nav.Link>
+						<Nav.Link
+							href="#Hard"
+							className="ms-auto Hard"
+							onClick={() => {
+								toggleMode("Hard");
+							}}
+						>
+							Hard
 						</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>

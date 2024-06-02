@@ -1,0 +1,141 @@
+@font-face {
+	font-family: gameFont;
+	src: url("Resources/Fonts/TechnoRaceItalic-eZRWe.otf");
+}
+:root {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+	font-family: gameFont;
+	display: flex;
+	flex-direction: column;
+}
+
+.NBrand {
+	font-family: gameFont;
+}
+
+.Board {
+	width: 100vmin;
+	height: 100vmin;
+	max-height: 45rem;
+	align-self: center;
+}
+.Board > * {
+	display: flex;
+	justify-content: space-around;
+}
+.Board > * > * {
+	padding: 0.8rem;
+	border: solid white 3px;
+	border-radius: 0.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.square {
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	margin: 0;
+}
+
+.O {
+	background-image: url("Resources/Icons/letter-o-svgrepo-com.svg");
+	animation: flip 0.5s linear;
+}
+.X {
+	background-image: url("Resources/Icons/x-symbol-svgrepo-com.svg");
+	animation: flip 0.5s linear;
+}
+.Ofirst {
+	background-image: url("Resources/Icons/letter-o-svgrepo-com.svg");
+	animation:
+		flip 0.5s linear,
+		toGold 0.5s linear forwards;
+}
+.Osecond {
+	background-image: url("Resources/Icons/letter-o-svgrepo-com.svg");
+	animation:
+		flip 0.75s linear,
+		toGold 0.75s linear forwards;
+}
+.Othird {
+	background-image: url("Resources/Icons/letter-o-svgrepo-com.svg");
+	animation:
+		flip 1s linear,
+		toGold 1s linear forwards;
+}
+.Xfirst {
+	background-image: url("Resources/Icons/x-symbol-svgrepo-com.svg");
+	animation:
+		flip 0.5s linear,
+		toGold 0.5s linear forwards;
+}
+.Xsecond {
+	background-image: url("Resources/Icons/x-symbol-svgrepo-com.svg");
+	animation:
+		flip 0.75s linear,
+		toGold 0.75s linear forwards;
+}
+.Xthird {
+	background-image: url("Resources/Icons/x-symbol-svgrepo-com.svg");
+	animation:
+		flip 1s linear,
+		toGold 1s linear forwards;
+}
+
+@keyframes toGold {
+	from {
+	}
+	to {
+		background-color: rgba(226, 252, 11, 0.898);
+	}
+}
+#reset {
+	height: 2.5rem;
+	width: 5rem;
+	background-color: rgb(232, 80, 80);
+	border-radius: 0.2rem;
+	box-shadow: 0 0 2px black;
+	font-family: gameFont;
+}
+#reset:active {
+	background-color: rgba(232, 80, 80, 0.6);
+	transform: scale(1.05);
+	box-shadow: 0 0 2px white;
+	color: grey;
+}
+.x {
+	border-color: #f523b2;
+}
+.o {
+	border-color: #11dfef;
+}
+.Multiplayer {
+  color: rgba(232,226,226,0.733);
+}
+.Easy {
+  color: rgba(239,251,124,0.733);
+  
+}
+.Medium {
+  color: rgba(67,199,247,0.666);
+  
+}
+.Hard {
+  color: rgba(133,48,104,0.666);
+}
